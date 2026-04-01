@@ -1,6 +1,5 @@
 import streamlit as st
 
-import streamlit as st
 
 # =======================================================
 # 1. ESTILOS MAESTROS DEFINITIVOS
@@ -98,6 +97,15 @@ def caja_resultado(texto):
 
 # Guardamos la rama
 rama = op1[0]  # "A" o "B"
+st.header("¿Qué zona quiere ser la protagonista hoy?")
+op1 = st.radio(
+    "",
+    ("A) El clítoris, que lleva años pidiendo un aumento de sueldo ", 
+     "B) El punto G, que está más escondido que mi dignidad un domingo",
+     "C) La vulva entera, que yo soy muy de repartir juego ",
+     "D) El ano, que una es curiosa",
+     "E) El pene, que ya no sabe dónde meterse")
+)
 
 # -------------------------------------------------------
 # Preguntas 2, 3, 4
