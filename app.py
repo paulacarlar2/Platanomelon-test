@@ -31,7 +31,7 @@ st.markdown("""
         }
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] input:checked + div {
             background-color: #feec03 !important; 
-            border-color: #FFEB3B !important;
+            border-color: #ff0a9e !important;
         }
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
             background-color: #FF00FF !important; 
@@ -77,13 +77,13 @@ def caja_resultado(texto):
     st.markdown(
         f"""
         <div class="caja-magica" style="
-            background-color: #FFEB3B !important; 
+            background-color: #feec03 !important; 
             padding: 20px !important; 
             border-radius: 15px !important; 
-            border: 4px solid #FF69B4 !important; 
+            border: 4px solid #ff0a9e !important; 
             text-align: center !important; 
             margin: 20px 0px !important;
-            box-shadow: 5px 5px 0px #FF69B4 !important;
+            box-shadow: 5px 5px 0px #ff0a9e !important;
         ">
              ✨ {texto} ✨
         </div>
