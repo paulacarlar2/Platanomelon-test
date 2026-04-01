@@ -1,6 +1,24 @@
 import streamlit as st
 
-
+def mostrar_resultado(nombre_juguete):
+    st.markdown(
+        f"""
+        <div style="
+            background-color: #FFEB3B; 
+            color: #FF00FF; 
+            padding: 20px; 
+            border-radius: 15px; 
+            border: 3px double #FF00FF; 
+            font-weight: bold; 
+            text-align: center; 
+            font-size: 24px;
+            margin: 20px 0px;
+        ">
+            ✨ Resultado: {nombre_juguete} ✨
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
 
 
 def info_custom(text: str):
