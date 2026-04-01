@@ -8,12 +8,12 @@ def caja_resultado(texto):
             color: #FF00FF; 
             padding: 20px; 
             border-radius: 15px; 
-            border: 4px solid #f023b0; 
+            border: 4px solid #FF69B4; 
             font-weight: 900; 
             text-align: center; 
             font-size: 22px;
             margin: 20px 0px;
-            box-shadow: 5px 5px 0px #f023b0;
+            box-shadow: 5px 5px 0px #FF69B4;
         ">
              {texto} 
         </div>
