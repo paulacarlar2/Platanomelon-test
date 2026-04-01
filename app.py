@@ -4,7 +4,7 @@ def caja_resultado(texto):
     st.markdown(
         f"""
         <div style="
-            background-color: #ff69b4; 
+            background-color: #FFEB3B; 
             color: ff69b4; 
             padding: 20px; 
             border-radius: 15px; 
