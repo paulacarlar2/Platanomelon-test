@@ -89,7 +89,7 @@ def caja_resultado(texto):
         </div>
         """
         unsafe_allow_html=True
-    )
+        )
 
 # --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
 def caja_resultado(texto):
