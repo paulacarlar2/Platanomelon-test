@@ -45,7 +45,7 @@ st.markdown("""
         }
         section[data-testid="stMain"] div.stButton > button p, 
         section[data-testid="stMain"] div.stButton > button span {
-            color: #FF69B4 !important; 
+            color: #ff0a9e !important; 
             font-weight: bold !important;
             font-size: 18px !important;
         }
