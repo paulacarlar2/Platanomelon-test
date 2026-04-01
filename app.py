@@ -12,14 +12,6 @@ def info_custom(text: str):
         """,
         unsafe_allow_html=True,
     )
-    st.background(
-        f"""
-        <div style= "background: #f023b0; textColor: #ffffff"
-            {text}
-        </div>
-        """,
-        unsafe_allow_html=true,
-    )
 
 
 
