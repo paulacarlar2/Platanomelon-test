@@ -13,12 +13,12 @@ def info_custom(text: str):
         """,
         unsafe_allow_html=True,
     )
-[theme]
-primaryColor="#ffff00"
-backgroundColor="#f023b0"
-secondaryBackgroundColor="#ab0052"
-textColor="#ffffff"
-font="montserrat"
+    [theme]
+    primaryColor="#ffff00"
+    backgroundColor="#f023b0"
+    secondaryBackgroundColor="#ab0052"
+    textColor="#ffffff"
+    font="montserrat"
 
 st.title("Qué juguete sexual va contigo")
 
