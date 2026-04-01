@@ -15,13 +15,7 @@ a, span, p, label {
     background-color: #ffff00;
     color: black;
 }
-</style>
-""", unsafe_allow_html=True)
 
-
-st.markdown("""
-<style>
-/* Color de los radio buttons sin marcar */
 .stRadio input[type="radio"] {
     accent-color: #c2185b; /* rosa más oscuro */
 }
