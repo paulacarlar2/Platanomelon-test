@@ -68,7 +68,7 @@ def info_custom(text: str):
         <div style='background-color: #FFEB3B; color: #FF00FF; padding: 14px; border-radius: 10px; border: 1px solid #FF00FF; font-weight: 600;'>
             {text}
         </div>
-        """,
+        """
         unsafe_allow_html=True,
     )
 
@@ -374,5 +374,4 @@ if st.button("Ver resultado"):
                                             if rama == "D":
                                                 if seq == "BCADBBBDBCCCCBABBDBC":
                                                     st.success("Resultado: La Ojetelux (D)") 
-info_custom("Ups, esta combinación no la hemos hecho...")
-                                                                                                                           
+info_custom("Ups, esta combinación no la hemos hecho...")                                                                                                                   
