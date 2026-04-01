@@ -12,7 +12,27 @@ def info_custom(text: str):
         """,
         unsafe_allow_html=True,
     )
-
+# Estilos personalizados para la página
+    st.markdown("""
+        <style>
+            body {
+                background-color: #FF69B4;
+                color: white;
+            }
+            .stApp {
+                background-color: #FF69B4;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: white;
+            }
+            .stRadio {
+                color: white;
+            }
+            .stRadio > label {
+                color: white;
+            }
+        </style>
+    """, unsafe_allow_html=True)
 
 
 st.title("Qué juguete sexual va contigo")
