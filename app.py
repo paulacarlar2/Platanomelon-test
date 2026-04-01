@@ -1,142 +1,93 @@
 import streamlit as st
 
-
-# --- 1. ESTILOS DEFINITIVOS ---
+# =======================================================
+# 1. ESTILOS MAESTROS DEFINITIVOS
+# =======================================================
 st.markdown("""
- <style>
-        /* FONDO Y LETRAS BLANCAS (Venciendo al Modo Claro) */
+    <style>
+        /* FONDO ROSA PARA TODA LA APP */
         .stApp, .main {
-            background-color: #ff0a9e !important;
-        }
-        h1, h2, h3, h4, h5, h6, label, div[data-baseweb="radio"] div {
-            color: white !important;
-        }
-        p {
-            color: white !important;
-        }
-
-        /* CÍRCULO EXTERIOR DEL RADIO BUTTON (Siempre amarillo) */
-        div[data-baseweb="radio"] > div:first-child {
-            background-color: transparent !important;
-            border: 2px solid #feec03 !important;
-        }
-
-        /* CÍRCULO SELECCIONADO (Fondo amarillo) */
-        div[data-baseweb="radio"] input:checked + div {
-            background-color: #feec03 !important;
-            border-color: #feec03 !important;
-        }
-
-        /* PUNTITO INTERIOR (Rosa oscuro/Magenta) */
-        div[data-baseweb="radio"] > div:first-child > div {
-            background-color: #FF00FF !important; 
+            background-color: #FF69B4 !important;
         }
         
-        /* BLINDAJE PARA LA CAJA DE RESULTADO (Obliga a que sea rosa) */
-        .caja-magica p {
-            color: #ff0a9e !important;
+        /* LETRAS BLANCAS PARA EL QUIZ (Títulos, preguntas, opciones) */
+        .main h1, .main h2, .main h3, .main h4, .main h5, .main h6, 
+        .main p, .main span, .main label, .main div[data-baseweb="radio"] div {
+            color: white !important;
+        }
+
+        /* RADIO BUTTONS (Los circulitos de las opciones) */
+        div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child {
+            background-color: transparent !important;
+            border: 2px solid #FFEB3B !important; /* Borde amarillo */
+        }
+        div[data-testid="stRadio"] div[data-baseweb="radio"] input:checked + div {
+            background-color: #FFEB3B !important; /* Fondo amarillo al marcar */
+            border-color: #FFEB3B !important;
+        }
+        div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
+            background-color: #FF00FF !important; /* Puntito rosa oscuro dentro */
+        }
+        
+        /* BOTÓN DE "VER RESULTADO" */
+        div.stButton > button {
+            background-color: white !important; /* Fondo blanco */
+            border: 2px solid #FFEB3B !important; /* Borde amarillo */
+            border-radius: 10px !important;
+        }
+        div.stButton > button p, div.stButton > button span {
+            color: #FF69B4 !important; /* Letras rosas */
+            font-weight: bold !important;
+            font-size: 18px !important;
+        }
+        /* Efecto al pasar el ratón por el botón */
+        div.stButton > button:hover {
+            background-color: #FFEB3B !important; /* Fondo amarillo */
+            border-color: white !important;
+        }
+        div.stButton > button:hover p, div.stButton > button:hover span {
+            color: #FF00FF !important; /* Letras rosa oscuro */
+        }
+
+        /* BLINDAJE PARA LA CAJA DE RESULTADO (Siempre texto rosa) */
+        .caja-magica, .caja-magica p, .caja-magica span {
+            color: #FF69B4 !important;
+            font-weight: 900 !important;
+            font-size: 22px !important;
             margin: 0 !important;
         }
-        /* --- EXCEPCIONES EN NEGRO --- */
-        
-        /* 1. Menú superior derecho (ruedecita, opciones de tema, etc.) */
-        [data-testid="stHeader"] *, [data-baseweb="popover"] *, div[role="dialog"] * {
-            color: black !important;
-        }
 
-        /* 2. Letras del botón de "Ver resultado" */
-        div.stButton > button p, div.stButton > button span {
-            color: black !important;
+        /* SALVAMOS EL MENÚ DE ARRIBA (Modo claro/oscuro) */
+        header[data-testid="stHeader"] *, 
+        div[data-baseweb="popover"] *, 
+        div[role="dialog"] * {
+            color: var(--text-color) !important; /* Se adapta solo */
         }
     </style>
 """, unsafe_allow_html=True)
 
-
-# --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
+# =======================================================
+# 2. FUNCIÓN PARA DIBUJAR EL RESULTADO FINAL
+# =======================================================
 def caja_resultado(texto):
     st.markdown(
         f"""
         <div class="caja-magica" style="
-            background-color: #feec03; 
-            padding: 20px; 
-            border-radius: 15px; 
-            border: 4px solid #ff0a9e; 
-            font-weight: 900; 
-            text-align: center; 
-            font-size: 22px;
-            margin: 20px 0px;
-            box-shadow: 5px 5px 0px #ff0a9e;
+            background-color: #FFEB3B !important; 
+            padding: 20px !important; 
+            border-radius: 15px !important; 
+            border: 4px solid #FF69B4 !important; 
+            text-align: center !important; 
+            margin: 20px 0px !important;
+            box-shadow: 5px 5px 0px #FF69B4 !important;
         ">
-             {texto} 
+             ✨ {texto} ✨
         </div>
         """, 
         unsafe_allow_html=True
     )
 
 
-st.markdown("""
-    <style>
-        /* 1. FONDO Y LETRAS BLANCAS (Venciendo al Modo Claro) */
-        .stApp, .main {
-            background-color: #ff0a9e !important;
-        }
-        h1, h2, h3, h4, h5, h6, p, span, label, div[data-baseweb="radio"] div {
-            color: white !important;
-        }
-
-        /* 2. CÍRCULO EXTERIOR DEL RADIO BUTTON (Siempre amarillo) */
-        div[data-baseweb="radio"] > div:first-child {
-            background-color: transparent !important;
-            border: 2px solid #feec03!important;
-        }
-
-        /* 3. CÍRCULO SELECCIONADO (Fondo amarillo) */
-        /* Cuando se marca, el fondo del círculo se vuelve amarillo */
-        div[data-baseweb="radio"] input:checked + div {
-            background-color: #feec03 !important;
-            border-color: #feec03 !important;
-        }
-
-        /* 4. PUNTITO INTERIOR (Rosa oscuro/Magenta) */
-        /* Fuerza el color del puntito interior siempre */
-        div[data-baseweb="radio"] > div:first-child > div {
-            background-color: #FF00FF !important; 
-        }
-    </style>
-""", unsafe_allow_html=True)
-st.markdown("""
-    <style>
-        body {
-            background-color: #ff0a9e;
-            color: white;
-        }
-        .stApp {
-            background-color: #ff0a9e;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: white;
-        }
-        .stRadio {
-            color: white;
-        }
-        .stRadio > label {
-            color: white;
-        }
-        /* Estilos para los radio buttons */
-        .stRadio > div > label > div:first-child {
-            background-color: #feec03;  /* Rosa palo */
-            border-color: #feec03;
-        }
-        .stRadio > div > label > div:first-child input:checked ~ div {
-            background-color: #feec03;  /* Amarillo cuando se selecciona */
-            border-color: #FDD835;
-        }
-        /* Para inputs checked */
-        [data-testid="stRadio"] input:checked {
-            accent-color: #feec03;  /* Amarillo */
-        }
-    </style>
-""", unsafe_allow_html=True)
 
 
 st.title("¿Qué juguete sexual va contigo?")
