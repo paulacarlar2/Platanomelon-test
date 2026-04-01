@@ -70,7 +70,7 @@ def info_custom(text: str):
 
         unsafe_allow_html=True,
     )
-        """
+            """
 
 st.title("Qué juguete sexual va contigo")
 
