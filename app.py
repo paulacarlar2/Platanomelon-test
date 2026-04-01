@@ -3,7 +3,7 @@ import streamlit as st
 
 
 
-    def info_custom(text: str):
+def info_custom(text: str):
     st.markdown(
         f"""
         <div style='background-color: #FFC0CB; color: #FFFFFF; padding: 14px; border-radius: 10px; border: 1px solid #FFFFFF; font-weight: 600;'>
