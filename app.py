@@ -17,6 +17,22 @@ a, span, p, label {
 }
 </style>
 """, unsafe_allow_html=True)
+import streamlit as st
+
+st.markdown("""
+<style>
+/* Color de los radio buttons sin marcar */
+.stRadio input[type="radio"] {
+    accent-color: #c2185b; /* rosa más oscuro */
+}
+
+/* Color cuando están marcados */
+.stRadio input[type="radio"]:checked {
+    accent-color: #ffd600; /* amarillo */
+}
+</style>
+""", unsafe_allow_html=True)
+``
 
 st.set_page_config(page_title="Qué juguete sexual va contigo")
 
