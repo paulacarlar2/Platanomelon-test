@@ -288,7 +288,7 @@ if st.button("Ver resultado"):
     if rama == "A":
         # Final principal del grupo A depende de secuencia AAA
         if seq == "CAAAAAABABAAAAAAAAAB":
-            st.success("Resultado: La Caricia Mojada (A)")
+            caja_resultado("Resultado: La Caricia Mojada (A)")
         else:
             if rama == "A":
             # Final principal del grupo A depende de secuencia AAA
