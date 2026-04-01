@@ -4,7 +4,7 @@ st.markdown("""
     <style>
         /* Fondo general de la aplicación */
         .stApp, .main {
-            background-color: #FF69B4 !important;
+            background-color: #ff0a9e !important;
         }
         
         /* Forzar que todos los títulos sean blancos */
