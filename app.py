@@ -371,4 +371,5 @@ if st.button("Ver resultado"):
                                             if rama == "D":
                                                 if seq == "BCADBBBDBCCCCBABBDBC":
                                                     st.success("Resultado: La Ojetelux (D)") 
-info_custom("Ups, esta combinación no la hemos hecho...")                                                                                                                   
+else:
+    info_custom("Ups, esta combinación no la hemos hecho...")                                                                                                                   
