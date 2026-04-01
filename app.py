@@ -311,7 +311,7 @@ if st.button("Ver resultado"):
                                                 if seq == "CAABCCCBCBBBABBBBCBC":
                                                     st.success("Resultado: La Novata (A)")
                                                 else:
-                                                    st.success("Ups, esta combinación no la hemos hecho")
+                                                    caja_resultado("Ups, esta combinación no la hemos hecho")
 
             # Si no coincide con AAA, igualmente se queda en grupo A,
             # solo que recibe un final alternativo del grupo A
