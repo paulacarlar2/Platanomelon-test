@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 # =======================================================
 # 1. ESTILOS MAESTROS DEFINITIVOS
 # =======================================================
@@ -11,7 +10,7 @@ st.markdown("""
             background-color: #ff0a9e !important;
         }
         
-        /* 2. LETRAS BLANCAS (Solo afectamos a la parte central) */
+        /* 2. LETRAS BLANCAS (Francotirador: Solo afectamos a la parte central, el menú se salva) */
         section[data-testid="stMain"] h1, 
         section[data-testid="stMain"] h2, 
         section[data-testid="stMain"] h3, 
@@ -26,17 +25,14 @@ st.markdown("""
         }
 
         /* 3. RADIO BUTTONS (Círculos) */
-        /* Círculo exterior SIEMPRE amarillo */
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child {
             background-color: transparent !important;
             border: 2px solid #feec03 !important; 
         }
-        /* EL MÁS IMPORTANTE: Fondo del círculo AMARILLO al seleccionarlo */
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] input:checked + div {
             background-color: #feec03 !important; 
-            border-color: #feec03 !important;
+            border-color: #ff0a9e !important;
         }
-        /* El puntito de dentro (Rosa oscuro) */
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
             background-color: #ff0a9e !important; 
         }
@@ -59,14 +55,14 @@ st.markdown("""
         }
         section[data-testid="stMain"] div.stButton > button:hover p, 
         section[data-testid="stMain"] div.stButton > button:hover span {
-            color: #ff0a9e !important; 
+            color: #FF00FF !important; 
         }
 
         /* 5. BLINDAJE PARA LA CAJA DE RESULTADO (Siempre texto rosa) */
         section[data-testid="stMain"] .caja-magica, 
         section[data-testid="stMain"] .caja-magica p, 
         section[data-testid="stMain"] .caja-magica span {
-            color: #ff0a9e !important;
+            color: #FF69B4 !important;
             font-weight: 900 !important;
             font-size: 22px !important;
             margin: 0 !important;
@@ -91,12 +87,35 @@ def caja_resultado(texto):
         ">
              ✨ {texto} ✨
         </div>
-        """,
+        """, 
         unsafe_allow_html=True
     )
 
-# Guardamos la rama
-rama = op1[0]  # "A" o "B"
+# --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
+def caja_resultado(texto):
+    st.markdown(
+        f"""
+        <div class="caja-magica" style="
+            background-color: #feec03; 
+            padding: 20px; 
+            border-radius: 15px; 
+            border: 4px solid #ff0a9e; 
+            font-weight: 900; 
+            text-align: center; 
+            font-size: 22px;
+            margin: 20px 0px;
+            box-shadow: 5px 5px 0px #ff0a9e;
+        ">
+             {texto} 
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
+
+
+st.title("¿Qué juguete sexual va contigo?")
+
+# --- Pregunta 1 (ramificación principal) ---
 st.header("¿Qué zona quiere ser la protagonista hoy?")
 op1 = st.radio(
     "",
@@ -106,6 +125,9 @@ op1 = st.radio(
      "D) El ano, que una es curiosa",
      "E) El pene, que ya no sabe dónde meterse")
 )
+
+# Guardamos la rama
+rama = op1[0]  # "A" o "B"
 
 # -------------------------------------------------------
 # Preguntas 2, 3, 4
@@ -398,3 +420,22 @@ if st.button("Ver resultado"):
                                                     caja_resultado("Resultado: La Ojetelux (D)") 
                                                 else:                                               
                                                     caja_resultado("Ups, esta combinación no la hemos hecho")                                                                                                              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
