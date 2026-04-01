@@ -1,7 +1,5 @@
 import streamlit as st
 
-noo se me cambia: import streamlit as st
-
 # =======================================================
 # 1. ESTILOS MAESTROS DEFINITIVOS
 # =======================================================
@@ -36,7 +34,7 @@ st.markdown("""
             border-color: #ff0a9e !important;
         }
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
-            background-color: #ff0a9e !important; 
+            background-color: #FF00FF !important; 
         }
         
         /* 4. BOTÓN DE "VER RESULTADO" */
@@ -69,28 +67,7 @@ st.markdown("""
             font-size: 22px !important;
             margin: 0 !important;
         }
-       
     </style>
-     /* =========================================
-           ESTILOS DE LOS RADIO BUTTONS (Círculos)
-           ========================================= */
-        
-        /* 1. Círculo exterior SIEMPRE amarillo (opcional, si lo quieres amarillo incluso sin marcar) */
-        div[data-baseweb="radio"] > div:first-child {
-            background-color: transparent !important;
-            border: 2px solid #FFEB3B !important;
-        }
-
-        /* 2. EL MÁS IMPORTANTE: Fondo del círculo AMARILLO al seleccionarlo */
-        div[data-baseweb="radio"] input[type="radio"]:checked + div {
-            background-color: #FFEB3B !important; 
-            border-color: #FFEB3B !important;
-        }
-
-        /* 3. El puntito de dentro (Rosa oscuro, para que destaque sobre el amarillo) */
-        div[data-baseweb="radio"] input[type="radio"]:checked + div > div {
-            background-color: #FF00FF !important; 
-        }
 """, unsafe_allow_html=True)
 
 # =======================================================
