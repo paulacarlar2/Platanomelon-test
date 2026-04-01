@@ -1,5 +1,7 @@
 import streamlit as st
 
+
+
 st.markdown("""
 <style>
 .stApp {
@@ -15,10 +17,8 @@ a, span, p, label {
     background-color: #ffff00;
     color: black;
 }
-
-
-
-            """
+</style>
+""", unsafe_allow_html=True)
 
 st.title("Qué juguete sexual va contigo")
 
