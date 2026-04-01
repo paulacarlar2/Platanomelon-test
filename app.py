@@ -1,46 +1,36 @@
 import streamlit as st
-
-# Estilos personalizados para la página
 st.markdown("""
     <style>
-        body {
-            background-color: #ff69b4;
-            color: white;
+        /* 1. FONDO Y LETRAS BLANCAS (Venciendo al Modo Claro) */
+        .stApp, .main {
+            background-color: #FF69B4 !important;
         }
-        .stApp {
-            background-color: #FF69B4;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: white;
-        }
-        .stRadio {
-            color: white;
-        }
-        .stRadio > label {
-            color: white;
-        }
-        
-        /* --- ESTILOS CORREGIDOS PARA RADIO BUTTONS --- */
-        
-        /* 1. Fuerza que el borde exterior de TODOS los círculos sea amarillo siempre */
-        [data-testid="stRadio"] div[data-baseweb="radio"] div:first-child {
-            border-color: #feec03 !important; /* Amarillo por defecto */
+        h1, h2, h3, h4, h5, h6, p, span, label, div[data-baseweb="radio"] div {
+            color: white !important;
         }
 
-        /* 2. Fuerza que el PUNTO INTERIOR cuando está SELECCIONADO sea rosa oscuro */
-        /* Apuntamos al pseudo-elemento ::after que Streamlit usa para el punto. !important es clave aquí. */
-        [data-testid="stRadio"] input[type="radio"]:checked + div::after {
-            background-color: #FF00FF !important; /* Magenta/Rosa oscuro deseado */
-            border-color: #FF00FF !important;
+        /* 2. CÍRCULO EXTERIOR DEL RADIO BUTTON (Siempre amarillo) */
+        div[data-baseweb="radio"] > div:first-child {
+            background-color: transparent !important;
+            border: 2px solid #feec03!important;
         }
-        
-        /* 3. Eliminamos el accent-color que pusiste antes para evitar conflictos */
-        [data-testid="stRadio"] input:checked {
-            accent-color: initial !important; 
+
+        /* 3. CÍRCULO SELECCIONADO (Fondo amarillo) */
+        /* Cuando se marca, el fondo del círculo se vuelve amarillo */
+        div[data-baseweb="radio"] input:checked + div {
+            background-color: #feec03 !important;
+            border-color: #feec03 !important;
         }
-        
+
+        /* 4. PUNTITO INTERIOR (Rosa oscuro/Magenta) */
+        /* Fuerza el color del puntito interior siempre */
+        div[data-baseweb="radio"] > div:first-child > div {
+            background-color: #FF00FF !important; 
+        }
     </style>
 """, unsafe_allow_html=True)
+# Estilos personalizados para la página
+
 def caja_resultado(texto):
     st.markdown(
         f"""
