@@ -3,110 +3,90 @@ import streamlit as st
 
 # --- 1. ESTILOS DEFINITIVOS ---
 st.markdown("""
-<style>
-        /* 1. FONDO ROSA PARA LA APP */
+st.markdown("""
+    <style>
+        /* =========================================
+           1. FONDO Y TEXTO PRINCIPAL DEL QUIZ
+           ========================================= */
+        /* Fondo rosa vibrante para toda la app */
         .stApp, .main {
-            background-color: #ff0a9e !important;
+            background-color: #FF69B4 !important;
         }
         
-        /* 2. LETRAS BLANCAS SOLO EN LA ZONA PRINCIPAL (Así salvamos el menú) */
+        /* Forzamos letras blancas SOLO en la zona del quiz. 
+           Al usar ".main", dejamos en paz el menú de arriba */
         .main h1, .main h2, .main h3, .main h4, .main h5, .main h6, 
         .main p, .main span, .main label, .main div[data-baseweb="radio"] div {
             color: white !important;
         }
 
-        /* 3. RADIO BUTTONS (Círculos) */
-        div[data-baseweb="radio"] > div:first-child {
+        /* =========================================
+           2. ESTILOS DE LOS RADIO BUTTONS (Círculos)
+           ========================================= */
+        /* Círculo exterior (Siempre amarillo) */
+        div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child {
             background-color: transparent !important;
-            border: 2px solid #feec03 !important;
+            border: 2px solid #FFEB3B !important;
         }
-        div[data-baseweb="radio"] input:checked + div {
-            background-color: #feec03!important;
-            border-color: #feec03 !important;
+        
+        /* Círculo cuando lo seleccionas (Fondo amarillo) */
+        div[data-testid="stRadio"] div[data-baseweb="radio"] input:checked + div {
+            background-color: #FFEB3B !important;
+            border-color: #FFEB3B !important;
         }
-        div[data-baseweb="radio"] > div:first-child > div {
+        
+        /* Puntito interior al seleccionar (Rosa oscuro/Magenta) */
+        div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
             background-color: #FF00FF !important; 
         }
         
-        /* 4. BOTÓN "VER RESULTADO" INMUNE A MODOS CLARO/OSCURO */
+        /* =========================================
+           3. BOTÓN DE "VER RESULTADO"
+           ========================================= */
+        /* Estado normal: Fondo blanco, borde amarillo */
         div.stButton > button {
             background-color: white !important; 
-            border: 2px solid #feec03 !important;
+            border: 2px solid #FFEB3B !important;
             border-radius: 10px !important;
         }
+        /* Letras del botón en rosa */
         div.stButton > button p, div.stButton > button span {
-            color: #FF69B4 !important; /* Letras rosas */
+            color: #FF69B4 !important; 
             font-weight: bold !important;
+            font-size: 18px !important;
         }
-        /* Al pasar el ratón */
+        
+        /* Estado Hover (cuando pasas el ratón): Fondo amarillo */
         div.stButton > button:hover {
-            background-color: #feec03 !important; /* Se vuelve amarillo */
+            background-color: #FFEB3B !important; 
             border-color: white !important;
         }
         div.stButton > button:hover p, div.stButton > button:hover span {
-            color: #FF00FF !important; /* Letras rosas oscuras */
+            color: #FF00FF !important; /* Letras más oscuras para resaltar */
         }
 
-        /* 5. DEJAMOS EL MENÚ SUPERIOR EN PAZ */
-        header[data-testid="stHeader"] *, div[data-baseweb="popover"] *, div[role="dialog"] * {
+        /* =========================================
+           4. BLINDAJE DE LA CAJA DE RESULTADO FINAL
+           ========================================= */
+        /* Nos aseguramos de que el texto del resultado NUNCA se vuelva blanco */
+        .caja-magica, .caja-magica p, .caja-magica span {
+            color: #FF69B4 !important;
+            font-weight: 900 !important;
+            font-size: 22px !important;
+            margin: 0 !important;
+        }
+
+        /* =========================================
+           5. SALVAVIDAS DEL MENÚ SUPERIOR Y SETTINGS
+           ========================================= */
+        /* Forzamos a que Streamlit recupere el control de sus propios menús */
+        header[data-testid="stHeader"] *, 
+        div[data-baseweb="popover"] *, 
+        div[role="dialog"] * {
             color: initial !important; 
         }
     </style>
-  
-# Estilos personalizados para la página
-
-def caja_resultado(texto):
-    st.markdown(
-        f"""
-<div style="
-            background-color: #feec03; 
-            color: #ff0a9e; 
-            padding: 20px; 
-            border-radius: 15px; 
-            border: 4px solid #ff0a9e; 
-            font-weight: 900; 
-            text-align: center; 
-            font-size: 22px;
-            margin: 20px 0px;
-            box-shadow: 5px 5px 0px #ff0a9e;
-        ">
-             {texto} 
-        </div>
-        """, 
-        unsafe_allow_html=True
-    )
-
-def info_custom(text: str):
-    st.success(
-        f"""
-        <div style='background-color: #feec03; color: #ff69b4; padding: 14px; border-radius: 10px; border: 1px solid #FF00FF; font-weight: 600;'>
-            {text}
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-# Estilos personalizados para la página
-    st.markdown("""
-        <style>
-            body {
-                background-color: #ff0a9e;
-                color: white;
-            }
-            .stApp {
-                background-color: #ff0a9e;
-            }
-            h1, h2, h3, h4, h5, h6 {
-                color: white;
-            }
-            .stRadio {
-                color: white;
-            }
-            .stRadio > label {
-                color: white;
-            }
-        </style>
-    """, unsafe_allow_html=True)
-    # Reemplaza la sección de estilos (líneas 16-35) con esto:
+""", unsafe_allow_html=True)
 
 st.markdown("""
     <style>
