@@ -35,7 +35,7 @@ def info_custom(text: str):
     """, unsafe_allow_html=True)
 
 
-st.title("Qué juguete sexual va contigo")
+st.title("¿Qué juguete sexual va contigo?")
 
 # --- Pregunta 1 (ramificación principal) ---
 st.header("¿Qué zona quiere ser la protagonista hoy?")
