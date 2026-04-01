@@ -1,35 +1,44 @@
 import streamlit as st
+
 # Estilos personalizados para la página
 st.markdown("""
     <style>
-        /* Fondo general de la aplicación */
-        .stApp, .main {
-            background-color: #ff0a9e !important;
+        body {
+            background-color: #ff69b4;
+            color: white;
+        }
+        .stApp {
+            background-color: #FF69B4;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: white;
+        }
+        .stRadio {
+            color: white;
+        }
+        .stRadio > label {
+            color: white;
         }
         
-        /* Forzar que todos los títulos sean blancos */
-        h1, h2, h3, h4, h5, h6, span {
-            color: white !important;
-        }
+        /* --- ESTILOS CORREGIDOS PARA RADIO BUTTONS --- */
         
-        /* Forzar que el texto de las preguntas y opciones sea blanco */
-        p, [data-testid="stRadio"] label, div[data-baseweb="radio"] div {
-            color: white !important;
+        /* 1. Fuerza que el borde exterior de TODOS los círculos sea amarillo siempre */
+        [data-testid="stRadio"] div[data-baseweb="radio"] div:first-child {
+            border-color: #feec03 !important; /* Amarillo por defecto */
         }
 
-        /* Estilos para los radio buttons (círculos) */
-        .stRadio > div > label > div:first-child {
-            background-color: #feec03 !important;  /* Rosa palo/Amarillo */
-            border-color: #feec03 !important;
+        /* 2. Fuerza que el PUNTO INTERIOR cuando está SELECCIONADO sea rosa oscuro */
+        /* Apuntamos al pseudo-elemento ::after que Streamlit usa para el punto. !important es clave aquí. */
+        [data-testid="stRadio"] input[type="radio"]:checked + div::after {
+            background-color: #FF00FF !important; /* Magenta/Rosa oscuro deseado */
+            border-color: #FF00FF !important;
         }
-        .stRadio > div > label > div:first-child input:checked ~ div {
-            background-color: #feec03 !important;  /* Amarillo cuando se selecciona */
-            border-color: #feec03 !important;
-        }
-        /* Para inputs checked */
+        
+        /* 3. Eliminamos el accent-color que pusiste antes para evitar conflictos */
         [data-testid="stRadio"] input:checked {
-            accent-color: #feec03 !important;  /* Amarillo */
+            accent-color: initial !important; 
         }
+        
     </style>
 """, unsafe_allow_html=True)
 def caja_resultado(texto):
