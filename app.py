@@ -1,5 +1,7 @@
 import streamlit as st
 
+import streamlit as st
+
 # =======================================================
 # 1. ESTILOS MAESTROS DEFINITIVOS
 # =======================================================
@@ -10,7 +12,7 @@ st.markdown("""
             background-color: #ff0a9e !important;
         }
         
-        /* 2. LETRAS BLANCAS (Francotirador: Solo afectamos a la parte central, el menú se salva) */
+        /* 2. LETRAS BLANCAS (Francotirador: Solo afectamos a la parte central) */
         section[data-testid="stMain"] h1, 
         section[data-testid="stMain"] h2, 
         section[data-testid="stMain"] h3, 
@@ -25,14 +27,17 @@ st.markdown("""
         }
 
         /* 3. RADIO BUTTONS (Círculos) */
+        /* Círculo exterior SIEMPRE amarillo */
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child {
             background-color: transparent !important;
             border: 2px solid #feec03 !important; 
         }
+        /* EL MÁS IMPORTANTE: Fondo del círculo AMARILLO al seleccionarlo */
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] input:checked + div {
             background-color: #feec03 !important; 
-            border-color: #ff0a9e !important;
+            border-color: #feec03 !important;
         }
+        /* El puntito de dentro (Rosa oscuro, para que destaque sobre el amarillo) */
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
             background-color: #ff0a9e !important; 
         }
@@ -55,40 +60,19 @@ st.markdown("""
         }
         section[data-testid="stMain"] div.stButton > button:hover p, 
         section[data-testid="stMain"] div.stButton > button:hover span {
-            color: #FF00FF !important; 
+            color: #ff0a9e !important; 
         }
 
         /* 5. BLINDAJE PARA LA CAJA DE RESULTADO (Siempre texto rosa) */
         section[data-testid="stMain"] .caja-magica, 
         section[data-testid="stMain"] .caja-magica p, 
         section[data-testid="stMain"] .caja-magica span {
-            color: #FF69B4 !important;
+            color: #ff0a9e !important;
             font-weight: 900 !important;
             font-size: 22px !important;
             margin: 0 !important;
         }
-       
     </style>
-     /* =========================================
-           ESTILOS DE LOS RADIO BUTTONS (Círculos)
-           ========================================= */
-        
-        /* 1. Círculo exterior SIEMPRE amarillo (opcional, si lo quieres amarillo incluso sin marcar) */
-        div[data-baseweb="radio"] > div:first-child {
-            background-color: transparent !important;
-            border: 2px solid #FFEB3B !important;
-        }
-
-        /* 2. EL MÁS IMPORTANTE: Fondo del círculo AMARILLO al seleccionarlo */
-        div[data-baseweb="radio"] input[type="radio"]:checked + div {
-            background-color: #FFEB3B !important; 
-            border-color: #FFEB3B !important;
-        }
-
-        /* 3. El puntito de dentro (Rosa oscuro, para que destaque sobre el amarillo) */
-        div[data-baseweb="radio"] input[type="radio"]:checked + div > div {
-            background-color: #FF00FF !important; 
-        }
 """, unsafe_allow_html=True)
 
 # =======================================================
@@ -107,27 +91,6 @@ def caja_resultado(texto):
             box-shadow: 5px 5px 0px #ff0a9e !important;
         ">
              ✨ {texto} ✨
-        </div>
-        """, 
-        unsafe_allow_html=True
-    )
-
-# --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
-def caja_resultado(texto):
-    st.markdown(
-        f"""
-        <div class="caja-magica" style="
-            background-color: #feec03; 
-            padding: 20px; 
-            border-radius: 15px; 
-            border: 4px solid #ff0a9e; 
-            font-weight: 900; 
-            text-align: center; 
-            font-size: 22px;
-            margin: 20px 0px;
-            box-shadow: 5px 5px 0px #ff0a9e;
-        ">
-             {texto} 
         </div>
         """, 
         unsafe_allow_html=True
