@@ -348,6 +348,8 @@ if st.button("Ver resultado"):
                                                                                             if rama == "C":
                                                                                                 if seq == "CCCDCDBABADCDDDCCDDA ":
                                                                                                     st.success("Resultado: La Vibraluxe (C)")
+                                                                                                else:
+                                                                                                    st.success("Ups, esta combinación no la hemos hecho")
     if rama == "D":
         # Final principal del grupo A depende de secuencia AAA
         if seq == "CBABDDBABAACCCCCCDDA":
@@ -373,5 +375,5 @@ if st.button("Ver resultado"):
                                             if rama == "D":
                                                 if seq == "BCADBBBDBCCCCBABBDBC":
                                                     st.success("Resultado: La Ojetelux (D)") 
-else:
-    info_custom("Ups, esta combinación no la hemos hecho...")                                                                                                                   
+                                                else:                                               
+                                                    st.success("Ups, esta combinación no la hemos hecho")                                                                                                              
