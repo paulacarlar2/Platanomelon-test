@@ -26,7 +26,7 @@ st.markdown("""
 /* Creamos el círculo personalizado */
 .stRadio label {
     position: relative;
-    padding-left: 35px;
+    padding-left: 5px;
     cursor: pointer;
     font-size: 16px;
 }
