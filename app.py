@@ -1,4 +1,10 @@
 import streamlit as st
+[theme]
+primaryColor="#ffff00"
+backgroundColor="#f023b0"
+secondaryBackgroundColor="#ab0052"
+textColor="#ffffff"
+font="montserrat"
 
 st.set_page_config(page_title="Qué juguete sexual va contigo")
 
@@ -13,12 +19,7 @@ def info_custom(text: str):
         """,
         unsafe_allow_html=True,
     )
-    [theme]
-    primaryColor="#ffff00"
-    backgroundColor="#f023b0"
-    secondaryBackgroundColor="#ab0052"
-    textColor="#ffffff"
-    font="montserrat"
+
 
 st.title("Qué juguete sexual va contigo")
 
