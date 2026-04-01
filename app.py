@@ -56,7 +56,7 @@ st.markdown("""
         /* Estilos para los radio buttons */
         .stRadio > div > label > div:first-child {
             background-color: #FFEB3B;  /* Rosa palo */
-            border-color: #FFB6D9;
+            border-color: #FFEB3B;
         }
         .stRadio > div > label > div:first-child input:checked ~ div {
             background-color: #FFEB3B;  /* Amarillo cuando se selecciona */
