@@ -11,15 +11,6 @@ def info_custom(text: str):
         """,
         unsafe_allow_html=True,
     )
-def info_custom(text: str):
-    st.markdown(
-        f"""
-        <div style='background-color: #ffff00 color: #FF00FF; padding: 14px; border-radius: 10px; border: 1px solid #FF00FF; font-weight: 600; textcolor: #ffffff'>
-            {text}
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
 
 
 st.title("Qué juguete sexual va contigo")
