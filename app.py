@@ -1,6 +1,6 @@
 import streamlit as st
 
-def mostrar_resultado:
+def caja_resultado(texto):
     st.markdown(
         f"""
         <div style="
@@ -8,17 +8,18 @@ def mostrar_resultado:
             color: #FF00FF; 
             padding: 20px; 
             border-radius: 15px; 
-            border: 3px double #FF00FF; 
-            font-weight: bold; 
+            border: 4px solid #FF00FF; 
+            font-weight: 900; 
             text-align: center; 
-            font-size: 24px;
+            font-size: 22px;
             margin: 20px 0px;
+            box-shadow: 5px 5px 0px #FF00FF;
         ">
+            ✨ {texto} ✨
         </div>
         """, 
         unsafe_allow_html=True
     )
-
 
 def info_custom(text: str):
     st.success(
