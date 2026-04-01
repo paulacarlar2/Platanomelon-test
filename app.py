@@ -76,20 +76,20 @@ st.markdown("""
 def caja_resultado(texto):
     st.markdown(
         f"""
-        <div class="caja-magica" style="
-            background-color: #feec03 !important; 
-            padding: 20px !important; 
-            border-radius: 15px !important; 
-            border: 4px solid #ff0a9e !important; 
-            text-align: center !important; 
-            margin: 20px 0px !important;
-            box-shadow: 5px 5px 0px #ff0a9e !important;
-        ">
-             ✨ {texto} ✨
-        </div>
-        """
+        <div class="caja-magica" style="
+            background-color: #feec03 !important; 
+            padding: 20px !important; 
+            border-radius: 15px !important; 
+            border: 4px solid #ff0a9e !important; 
+            text-align: center !important; 
+            margin: 20px 0px !important;
+            box-shadow: 5px 5px 0px #ff0a9e !important;
+        ">
+              {texto} 
+        </div>
+        """,
         unsafe_allow_html=True
-        )
+    )
 
 # --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
 def caja_resultado(texto):
