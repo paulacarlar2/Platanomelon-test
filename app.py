@@ -19,16 +19,16 @@ st.markdown("""
 
         /* Estilos para los radio buttons (círculos) */
         .stRadio > div > label > div:first-child {
-            background-color: #FFEB3B !important;  /* Rosa palo/Amarillo */
-            border-color: #FFEB3B !important;
+            background-color: #feec03 !important;  /* Rosa palo/Amarillo */
+            border-color: #feec03 !important;
         }
         .stRadio > div > label > div:first-child input:checked ~ div {
-            background-color: #FFEB3B !important;  /* Amarillo cuando se selecciona */
-            border-color: #FDD835 !important;
+            background-color: #feec03 !important;  /* Amarillo cuando se selecciona */
+            border-color: #feec03 !important;
         }
         /* Para inputs checked */
         [data-testid="stRadio"] input:checked {
-            accent-color: #FFEB3B !important;  /* Amarillo */
+            accent-color: #feec03 !important;  /* Amarillo */
         }
     </style>
 """, unsafe_allow_html=True)
