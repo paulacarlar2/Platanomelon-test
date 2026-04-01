@@ -15,7 +15,7 @@ def caja_resultado(texto):
             margin: 20px 0px;
             box-shadow: 5px 5px 0px #FF00FF;
         ">
-            ✨ {texto} ✨
+             {texto} 
         </div>
         """, 
         unsafe_allow_html=True
@@ -367,7 +367,7 @@ if st.button("Ver resultado"):
                                                                                                 if seq == "CCCDCDBABADCDDDCCDDA ":
                                                                                                     st.success("Resultado: La Vibraluxe (C)")
                                                                                                 else:
-                                                                                                    st.success("Ups, esta combinación no la hemos hecho")
+                                                                                                    caja_resultado("Ups, esta combinación no la hemos hecho")
     if rama == "D":
         # Final principal del grupo A depende de secuencia AAA
         if seq == "CBABDDBABAACCCCCCDDA":
@@ -394,4 +394,4 @@ if st.button("Ver resultado"):
                                                 if seq == "BCADBBBDBCCCCBABBDBC":
                                                     st.success("Resultado: La Ojetelux (D)") 
                                                 else:                                               
-                                                    st.success("Ups, esta combinación no la hemos hecho")                                                                                                              
+                                                    caja_resultado("Ups, esta combinación no la hemos hecho")                                                                                                              
