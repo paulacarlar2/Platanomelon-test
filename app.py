@@ -38,6 +38,17 @@ st.markdown("""
             color: #ff0a9e !important;
             margin: 0 !important;
         }
+        /* --- EXCEPCIONES EN NEGRO --- */
+        
+        /* 1. Menú superior derecho (ruedecita, opciones de tema, etc.) */
+        [data-testid="stHeader"] *, [data-baseweb="popover"] *, div[role="dialog"] * {
+            color: black !important;
+        }
+
+        /* 2. Letras del botón de "Ver resultado" */
+        div.stButton > button p, div.stButton > button span {
+            color: black !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
