@@ -24,35 +24,35 @@ st.markdown("""
 }
 
 /* Creamos el círculo personalizado */
-.stRadio label {
-    position: relative;
-    padding-left: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    .stRadio label {
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+        font-size: 16px;
 }
 
 /* Círculo sin marcar (rosa oscuro) */
-.stRadio label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: #c2185b; /* rosa oscuro */
+    .stRadio label::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #c2185b; /* rosa oscuro */
 }
 
 /* Punto interior cuando está marcado */
-.stRadio input[type="radio"]:checked + label::after {
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 8px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ffd600; /* amarillo */
+    .stRadio input[type="radio"]:checked + label::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ffd600; /* amarillo */
 }
 </style>
 
