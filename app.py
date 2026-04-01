@@ -88,7 +88,7 @@ def caja_resultado(texto):
              ✨ {texto} ✨
         </div>
         """
-        unsafe_allow_html=True
+        unsafe_allow_html=True
     )
 
 # --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
