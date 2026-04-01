@@ -69,27 +69,7 @@ st.markdown("""
         }
        
     </style>
-     /* =========================================
-           ESTILOS DE LOS RADIO BUTTONS (Círculos)
-           ========================================= */
-        
-        /* 1. Círculo exterior SIEMPRE amarillo (opcional, si lo quieres amarillo incluso sin marcar) */
-        div[data-baseweb="radio"] > div:first-child {
-            background-color: transparent !important;
-            border: 2px solid #FFEB3B !important;
-        }
-
-        /* 2. EL MÁS IMPORTANTE: Fondo del círculo AMARILLO al seleccionarlo */
-        div[data-baseweb="radio"] input[type="radio"]:checked + div {
-            background-color: #FFEB3B !important; 
-            border-color: #FFEB3B !important;
-        }
-
-        /* 3. El puntito de dentro (Rosa oscuro, para que destaque sobre el amarillo) */
-        div[data-baseweb="radio"] input[type="radio"]:checked + div > div {
-            background-color: #FF00FF !important; 
-        }
-""", unsafe_allow_html=True)
+    
 
 # =======================================================
 # 2. FUNCIÓN PARA DIBUJAR EL RESULTADO FINAL
