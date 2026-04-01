@@ -2,15 +2,17 @@ import streamlit as st
 
 
 
-def info_custom(text: str):
+
+    def info_custom(text: str):
     st.markdown(
         f"""
-        <div style='background-color: #FFEB3B; color: #FF00FF; padding: 14px; border-radius: 10px; border: 1px solid #FF00FF; font-weight: 600;'>
+        <div style='background-color: #FFC0CB; color: #FFFFFF; padding: 14px; border-radius: 10px; border: 1px solid #FFFFFF; font-weight: 600;'>
             {text}
         </div>
         """,
         unsafe_allow_html=True,
     )
+
 
 
 st.title("Qué juguete sexual va contigo")
