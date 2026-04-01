@@ -293,23 +293,23 @@ if st.button("Ver resultado"):
             if rama == "A":
             # Final principal del grupo A depende de secuencia AAA
                 if seq == "BAABAAABABCAABAAAAAB":
-                    st.success("Resultado: La Caricia Mojada (A)")
+                    caja_resultado("Resultado: La Caricia Mojada (A)")
                 else:
                     if rama == "A":
                         if seq == "AAAAAACBACBAAAABAAAC":
-                            st.success("Resultado: La Caricia Mojada (A)")
+                            caja_resultado("Resultado: La Caricia Mojada (A)")
                         else:
                             if rama == "A":
                                 if seq == "BAABCBCBCBBBABBBBCBB":
-                                    st.success("Resultado: La Novata (A)")
+                                    caja_resultado("Resultado: La Novata (A)")
                                 else:  
                                     if rama == "A":
                                         if seq == "AAABCBCCBBBBABBCBCBB":
-                                            st.success("Resultado: La Novata (A)")
+                                            caja_resultado("Resultado: La Novata (A)")
                                         else:
                                             if rama == "A":
                                                 if seq == "CAABCCCBCBBBABBBBCBC":
-                                                    st.success("Resultado: La Novata (A)")
+                                                    caja_resultado("Resultado: La Novata (A)")
                                                 else:
                                                     caja_resultado("Ups, esta combinación no la hemos hecho")
 
@@ -320,78 +320,78 @@ if st.button("Ver resultado"):
     if rama == "C":
         # Final principal del grupo A depende de secuencia AAA
         if seq == "AACBCDAACBABDCDBBCCA":
-            st.success("Resultado: La Navaja Suiza (C)")
+            caja_resultado("Resultado: La Navaja Suiza (C)")
         else:
             if rama == "C":
             # Final principal del grupo A depende de secuencia AAA
                 if seq == "BACBCCACCBABDDDBBCCB":
-                    st.success("Resultado: La Navaja Suiza (C)")
+                    caja_resultado("Resultado: La Navaja Suiza (C)")
                 else:
                     if rama == "C":
                         if seq == "AACCCDAACCACDCCBCCA":
-                            st.success("Resultado: La Navaja Suiza (C)")
+                            caja_resultado("Resultado: La Navaja Suiza (C)")
                         else:
                             if rama == "C":
                                 if seq == "ABAAAADBDBBBBACABAAB":
-                                    st.success("Resultado: La Romantica Guarrilla (C)")
+                                    caja_resultado("Resultado: La Romantica Guarrilla (C)")
                                 else:  
                                     if rama == "C":
                                         if seq == "ABABAAACDBBABACABAAB ":
-                                            st.success("Resultado: La Romantica Guarrilla (C)")
+                                            caja_resultado("Resultado: La Romantica Guarrilla (C)")
                                         else:
                                             if rama == "C":
                                                 if seq == "BBAABADBCBBBBACBBABB ":
-                                                    st.success("Resultado: La Romantica Guarrilla (C)")
+                                                    caja_resultado("Resultado: La Romantica Guarrilla (C)")
                                                 else:
                                                     if rama == "C":
                                                         if seq == "CACBCCCACBBCDCDDCCCB":
-                                                            st.success("Resultado: La kamasutras (C)")
+                                                            caja_resultado("Resultado: La kamasutras (C)")
                                                         else:
                                                             if rama == "C":
                                                                 if seq == "BACBCDCACBCCDCDDCCCB ":
-                                                                    st.success("Resultado: La kamasutras (C)")
+                                                                    caja_resultado("Resultado: La kamasutras (C)")
                                                                 else:  
                                                                     if rama == "C":
                                                                         if seq == "CACCCCCBCCBDDCDDCCCB  ":
-                                                                            st.success("Resultado: La kamasutras (C)")
+                                                                            caja_resultado("Resultado: La kamasutras (C)")
                                                                         else:
                                                                             if rama == "C":
                                                                                 if seq == "CCCDDDBABADDDDDCCDDA ":
-                                                                                    st.success("Resultado: La Vibraluxe (C)")
+                                                                                    caja_resultado("Resultado: La Vibraluxe (C)")
                                                                                 else:
                                                                                     if rama == "C":
                                                                                         if seq == "CCCCDCBABBDDDDDCCDDC ":
-                                                                                            st.success("Resultado: La Vibraluxe (C)")
+                                                                                            caja_resultado("Resultado: La Vibraluxe (C)")
                                                                                         else:
                                                                                             if rama == "C":
                                                                                                 if seq == "CCCDCDBABADCDDDCCDDA ":
-                                                                                                    st.success("Resultado: La Vibraluxe (C)")
+                                                                                                    caja_resultado("Resultado: La Vibraluxe (C)")
                                                                                                 else:
                                                                                                     caja_resultado("Ups, esta combinación no la hemos hecho")
     if rama == "D":
         # Final principal del grupo A depende de secuencia AAA
         if seq == "CBABDDBABAACCCCCCDDA":
-            st.success("Resultado: La Turbo Coño (D)")
+            caja_resultado("Resultado: La Turbo Coño (D)")
         else:
             if rama == "D":
             # Final principal del grupo A depende de secuencia AAA
                 if seq == "BBACDCBABAADCCCCCDDA":
-                    st.success("Resultado: La Turbo Coño (D)")
+                    caja_resultado("Resultado: La Turbo Coño (D)")
                 else:
                     if rama == "D":
                         if seq == "CBABCDBABBACDCCCCDDB":
-                            st.success("Resultado: La Turbo Coño (D)")
+                            caja_resultado("Resultado: La Turbo Coño (D)")
                         else:
                             if rama == "D":
                                 if seq == "BCACBBBCBCCBCBABBDBB":
-                                    st.success("Resultado: La Ojetelux (D)")
+                                    caja_resultado("Resultado: La Ojetelux (D)")
                                 else:  
                                     if rama == "D":
                                         if seq == "CCACBCBCBCDBCBABBDBB":
-                                            st.success("Resultado: La Ojetelux (D)")
+                                            caja_resultado("Resultado: La Ojetelux (D)")
                                         else:
                                             if rama == "D":
                                                 if seq == "BCADBBBDBCCCCBABBDBC":
-                                                    st.success("Resultado: La Ojetelux (D)") 
+                                                    caja_resultado("Resultado: La Ojetelux (D)") 
                                                 else:                                               
                                                     caja_resultado("Ups, esta combinación no la hemos hecho")                                                                                                              
