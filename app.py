@@ -7,7 +7,7 @@ st.markdown("""
     <style>
         /* 1. FONDO ROSA PARA TODA LA APP */
         .stApp {
-            background-color: #FF69B4 !important;
+            background-color: #ff0a9e !important;
         }
         
         /* 2. LETRAS BLANCAS (Francotirador: Solo afectamos a la parte central, el menú se salva) */
@@ -27,10 +27,10 @@ st.markdown("""
         /* 3. RADIO BUTTONS (Círculos) */
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child {
             background-color: transparent !important;
-            border: 2px solid #FFEB3B !important; 
+            border: 2px solid #feec03 !important; 
         }
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] input:checked + div {
-            background-color: #FFEB3B !important; 
+            background-color: #feec03 !important; 
             border-color: #FFEB3B !important;
         }
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
@@ -40,7 +40,7 @@ st.markdown("""
         /* 4. BOTÓN DE "VER RESULTADO" */
         section[data-testid="stMain"] div.stButton > button {
             background-color: white !important; 
-            border: 2px solid #FFEB3B !important; 
+            border: 2px solid #feec03 !important; 
             border-radius: 10px !important;
         }
         section[data-testid="stMain"] div.stButton > button p, 
@@ -50,7 +50,7 @@ st.markdown("""
             font-size: 18px !important;
         }
         section[data-testid="stMain"] div.stButton > button:hover {
-            background-color: #FFEB3B !important; 
+            background-color: #feec03 !important; 
             border-color: white !important;
         }
         section[data-testid="stMain"] div.stButton > button:hover p, 
