@@ -93,8 +93,8 @@ def caja_resultado(texto):
 
 # --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
 def caja_resultado(texto):
-    st.markdown(
-        f"""
+st.markdown(
+f"""
         <div class="caja-magica" style="
             background-color: #feec03; 
             padding: 20px; 
