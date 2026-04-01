@@ -1,10 +1,22 @@
 import streamlit as st
-[theme]
-primaryColor="#ffff00"
-backgroundColor="#f023b0"
-secondaryBackgroundColor="#ab0052"
-textColor="#ffffff"
-font="montserrat"
+
+st.markdown("""
+<style>
+.stApp {
+    background-color: #f023b0;
+    color: #ffffff;
+}
+
+a, span, p, label {
+    color: #ffffff;
+}
+
+.stButton>button {
+    background-color: #ffff00;
+    color: black;
+}
+</style>
+""", unsafe_allow_html=True)
 
 st.set_page_config(page_title="Qué juguete sexual va contigo")
 
