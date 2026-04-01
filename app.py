@@ -3,29 +3,7 @@ import streamlit as st
 
 # --- 1. ESTILOS DEFINITIVOS ---
 st.markdown("""
-/* --- ESTILOS PARA EL BOTÓN "VER RESULTADO" --- */
-        div.stButton > button {
-            background-color: #FF00FF !important; /* Fondo rosa oscuro/magenta */
-            border: 2px solid white !important;
-            border-radius: 10px !important;
-        }
-        
-        /* Aseguramos que las letras del botón sean blancas SIEMPRE */
-        div.stButton > button p, div.stButton > button span {
-            color: white !important;
-            font-weight: bold !important;
-            font-size: 18px !important;
-        }
 
-        /* EFECTO HOVER: Cuando pasas el ratón por encima */
-        div.stButton > button:hover {
-            background-color: #feec03 !important; /* El fondo se vuelve amarillo */
-            border-color: #FF00FF !important; /* Borde rosa */
-        }
-        
-        div.stButton > button:hover p, div.stButton > button:hover span {
-            color: #FF00FF !important; /* Las letras se vuelven rosas */
-        }
     <style>
         /* FONDO Y LETRAS BLANCAS (Venciendo al Modo Claro) */
         .stApp, .main {
