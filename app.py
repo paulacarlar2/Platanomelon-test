@@ -1,5 +1,37 @@
 import streamlit as st
+# Estilos personalizados para la página
+st.markdown("""
+    <style>
+        /* Fondo general de la aplicación */
+        .stApp, .main {
+            background-color: #FF69B4 !important;
+        }
+        
+        /* Forzar que todos los títulos sean blancos */
+        h1, h2, h3, h4, h5, h6, span {
+            color: white !important;
+        }
+        
+        /* Forzar que el texto de las preguntas y opciones sea blanco */
+        p, [data-testid="stRadio"] label, div[data-baseweb="radio"] div {
+            color: white !important;
+        }
 
+        /* Estilos para los radio buttons (círculos) */
+        .stRadio > div > label > div:first-child {
+            background-color: #FFEB3B !important;  /* Rosa palo/Amarillo */
+            border-color: #FFEB3B !important;
+        }
+        .stRadio > div > label > div:first-child input:checked ~ div {
+            background-color: #FFEB3B !important;  /* Amarillo cuando se selecciona */
+            border-color: #FDD835 !important;
+        }
+        /* Para inputs checked */
+        [data-testid="stRadio"] input:checked {
+            accent-color: #FFEB3B !important;  /* Amarillo */
+        }
+    </style>
+""", unsafe_allow_html=True)
 def caja_resultado(texto):
     st.markdown(
         f"""
