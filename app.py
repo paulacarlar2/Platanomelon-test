@@ -75,7 +75,7 @@ st.markdown("""
 # =======================================================
 def caja_resultado(texto):
     st.markdown(
-        f"""
+        f"""
         <div class="caja-magica" style="
             background-color: #feec03 !important; 
             padding: 20px !important; 
