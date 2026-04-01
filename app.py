@@ -3,7 +3,7 @@ st.markdown("""
     <style>
         /* 1. FONDO Y LETRAS BLANCAS (Venciendo al Modo Claro) */
         .stApp, .main {
-            background-color: #FF69B4 !important;
+            background-color: #ff0a9e !important;
         }
         h1, h2, h3, h4, h5, h6, p, span, label, div[data-baseweb="radio"] div {
             color: white !important;
