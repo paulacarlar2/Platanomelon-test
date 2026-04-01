@@ -4,7 +4,7 @@ def caja_resultado(texto):
     st.markdown(
         f"""
         <div style="
-            background-color: #FFEB3B; 
+            background-color: #feec03; 
             color: #ff69b4; 
             padding: 20px; 
             border-radius: 15px; 
@@ -24,7 +24,7 @@ def caja_resultado(texto):
 def info_custom(text: str):
     st.success(
         f"""
-        <div style='background-color: #FFEB3B; color: #ff69b4; padding: 14px; border-radius: 10px; border: 1px solid #FF00FF; font-weight: 600;'>
+        <div style='background-color: #feec03; color: #ff69b4; padding: 14px; border-radius: 10px; border: 1px solid #FF00FF; font-weight: 600;'>
             {text}
         </div>
         """,
@@ -34,11 +34,11 @@ def info_custom(text: str):
     st.markdown("""
         <style>
             body {
-                background-color: #FF69B4;
+                background-color: #ff0a9e;
                 color: white;
             }
             .stApp {
-                background-color: #FF69B4;
+                background-color: #ff0a9e;
             }
             h1, h2, h3, h4, h5, h6 {
                 color: white;
@@ -56,11 +56,11 @@ def info_custom(text: str):
 st.markdown("""
     <style>
         body {
-            background-color: #ff69b4;
+            background-color: #ff0a9e;
             color: white;
         }
         .stApp {
-            background-color: #FF69B4;
+            background-color: #ff0a9e;
         }
         h1, h2, h3, h4, h5, h6 {
             color: white;
@@ -73,16 +73,16 @@ st.markdown("""
         }
         /* Estilos para los radio buttons */
         .stRadio > div > label > div:first-child {
-            background-color: #FFEB3B;  /* Rosa palo */
-            border-color: #FFEB3B;
+            background-color: #feec03;  /* Rosa palo */
+            border-color: #feec03;
         }
         .stRadio > div > label > div:first-child input:checked ~ div {
-            background-color: #FFEB3B;  /* Amarillo cuando se selecciona */
+            background-color: #feec03;  /* Amarillo cuando se selecciona */
             border-color: #FDD835;
         }
         /* Para inputs checked */
         [data-testid="stRadio"] input:checked {
-            accent-color: #FFEB3B;  /* Amarillo */
+            accent-color: #feec03;  /* Amarillo */
         }
     </style>
 """, unsafe_allow_html=True)
