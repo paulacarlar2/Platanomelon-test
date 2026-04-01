@@ -34,7 +34,7 @@ st.markdown("""
             border-color: #ff0a9e !important;
         }
         section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
-            background-color: #FF00FF !important; 
+            background-color: #ff0a9e !important; 
         }
         
         /* 4. BOTÓN DE "VER RESULTADO" */
