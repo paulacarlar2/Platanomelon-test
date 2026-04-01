@@ -5,7 +5,7 @@ def caja_resultado(texto):
         f"""
         <div style="
             background-color: #FFEB3B; 
-            color: ff69b4; 
+            color: #ff69b4; 
             padding: 20px; 
             border-radius: 15px; 
             border: 4px solid #FF69B4; 
