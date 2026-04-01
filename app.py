@@ -1,6 +1,6 @@
 import streamlit as st
 
-def mostrar_resultado(nombre_juguete):
+def mostrar_resultado:
     st.markdown(
         f"""
         <div style="
@@ -14,7 +14,6 @@ def mostrar_resultado(nombre_juguete):
             font-size: 24px;
             margin: 20px 0px;
         ">
-            ✨ Resultado: {nombre_juguete} ✨
         </div>
         """, 
         unsafe_allow_html=True
