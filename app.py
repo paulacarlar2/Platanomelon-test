@@ -1,4 +1,68 @@
 import streamlit as st
+import streamlit as st
+
+# --- 1. ESTILOS DEFINITIVOS ---
+st.markdown("""
+    <style>
+        /* FONDO Y LETRAS BLANCAS (Venciendo al Modo Claro) */
+        .stApp, .main {
+            background-color: #ff0a9e !important;
+        }
+        h1, h2, h3, h4, h5, h6, label, div[data-baseweb="radio"] div {
+            color: white !important;
+        }
+        p {
+            color: white !important;
+        }
+
+        /* CÍRCULO EXTERIOR DEL RADIO BUTTON (Siempre amarillo) */
+        div[data-baseweb="radio"] > div:first-child {
+            background-color: transparent !important;
+            border: 2px solid #feec03 !important;
+        }
+
+        /* CÍRCULO SELECCIONADO (Fondo amarillo) */
+        div[data-baseweb="radio"] input:checked + div {
+            background-color: #feec03 !important;
+            border-color: #feec03 !important;
+        }
+
+        /* PUNTITO INTERIOR (Rosa oscuro/Magenta) */
+        div[data-baseweb="radio"] > div:first-child > div {
+            background-color: #FF00FF !important; 
+        }
+        
+        /* BLINDAJE PARA LA CAJA DE RESULTADO (Obliga a que sea rosa) */
+        .caja-magica p {
+            color: #ff0a9e !important;
+            margin: 0 !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
+# --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
+def caja_resultado(texto):
+    st.markdown(
+        f"""
+        <div class="caja-magica" style="
+            background-color: #feec03; 
+            padding: 20px; 
+            border-radius: 15px; 
+            border: 4px solid #ff0a9e; 
+            font-weight: 900; 
+            text-align: center; 
+            font-size: 22px;
+            margin: 20px 0px;
+            box-shadow: 5px 5px 0px #ff0a9e;
+        ">
+             {texto} 
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
+
+
 st.markdown("""
     <style>
         /* 1. FONDO Y LETRAS BLANCAS (Venciendo al Modo Claro) */
