@@ -16,46 +16,45 @@ a, span, p, label {
     color: black;
 }
 
-st.markdown("""
-            
 /* Ocultamos el radio nativo */
 .stRadio input[type="radio"] {
     display: none;
 }
 
-/* Creamos el círculo personalizado */
-    .stRadio label {
-        position: relative;
-        padding-left: 35px;
-        cursor: pointer;
-        font-size: 16px;
+/* Label base */
+.stRadio label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-/* Círculo sin marcar (rosa oscuro) */
-    .stRadio label::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 4px;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background-color: #c2185b; /* rosa oscuro */
+/* Círculo rosa (sin marcar) */
+.stRadio label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #c2185b;
 }
 
-/* Punto interior cuando está marcado */
-    .stRadio input[type="radio"]:checked + label::after {
-        content: "";
-        position: absolute;
-        left: 4px;
-        top: 8px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #ffd600; /* amarillo */
+/* Punto amarillo (marcado) */
+.stRadio input[type="radio"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffd600;
 }
 </style>
-
+""", unsafe_allow_html=True)
+``
 
 
 st.set_page_config(page_title="Qué juguete sexual va contigo")
