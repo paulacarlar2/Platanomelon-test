@@ -16,7 +16,7 @@ def info_custom(text: str):
     st.markdown("""
         <style>
             body {
-                background-color: #FF69B4;
+                background-color: #f023b0;
                 color: white;
             }
             .stApp {
