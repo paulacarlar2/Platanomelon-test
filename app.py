@@ -74,7 +74,7 @@ st.markdown("""
 # 2. FUNCIÓN PARA DIBUJAR EL RESULTADO FINAL
 # =======================================================
 def caja_resultado(texto):
-    st.markdown(
+    st.markdown(
         f"""
         <div class="caja-magica" style="
             background-color: #feec03 !important; 
