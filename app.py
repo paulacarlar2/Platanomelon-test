@@ -74,27 +74,27 @@ st.markdown("""
 # 2. FUNCIÓN PARA DIBUJAR EL RESULTADO FINAL
 # =======================================================
 def caja_resultado(texto):
-    st.markdown(
-        f"""
-        <div class="caja-magica" style="
-            background-color: #feec03 !important; 
-            padding: 20px !important; 
-            border-radius: 15px !important; 
-            border: 4px solid #ff0a9e !important; 
-            text-align: center !important; 
-            margin: 20px 0px !important;
-            box-shadow: 5px 5px 0px #ff0a9e !important;
-        ">
-              {texto} 
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown(
+        f"""
+        <div class="caja-magica" style="
+            background-color: #feec03 !important; 
+            padding: 20px !important; 
+            border-radius: 15px !important; 
+            border: 4px solid #ff0a9e !important; 
+            text-align: center !important; 
+            margin: 20px 0px !important;
+            box-shadow: 5px 5px 0px #ff0a9e !important;
+        ">
+             ✨ {texto} ✨
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
 
 # --- 2. FUNCIÓN DE LA CAJA AMARILLA ---
 def caja_resultado(texto):
-    st.markdown(
-        f"""
+    st.markdown(
+        f"""
         <div class="caja-magica" style="
             background-color: #feec03; 
             padding: 20px; 
@@ -108,10 +108,9 @@ def caja_resultado(texto):
         ">
              {texto} 
         </div>
-        """,
-        unsafe_allow_html=True
-        )
-
+        """, 
+        unsafe_allow_html=True
+    )
 # Guardamos la rama
 rama = op1[0]  # "A" o "B"
 
