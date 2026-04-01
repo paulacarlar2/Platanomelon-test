@@ -67,7 +67,9 @@ st.markdown("""
             font-size: 22px !important;
             margin: 0 !important;
         }
-        /* =========================================
+       
+    </style>
+     /* =========================================
            ESTILOS DE LOS RADIO BUTTONS (Círculos)
            ========================================= */
         
@@ -87,7 +89,6 @@ st.markdown("""
         div[data-baseweb="radio"] input[type="radio"]:checked + div > div {
             background-color: #FF00FF !important; 
         }
-    </style>
 """, unsafe_allow_html=True)
 
 # =======================================================
