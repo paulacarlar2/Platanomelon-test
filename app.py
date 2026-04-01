@@ -17,59 +17,7 @@ a, span, p, label {
 }
 
 
-/* Ocultar radio nativo */
-.stRadio input[type="radio"] {
-    opacity: 0;
-    position: absolute;
-}
 
-/* Contenedor de cada opción */
-.stRadio label {
-    position: relative;
-    padding-left: 34px;
-    cursor: pointer;
-    display: block;
-}
-
-/* Círculo rosa (estado normal) */
-.stRadio label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 6px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: #b0005a;
-}
-
-/* Círculo amarillo cuando está seleccionado */
-.stRadio input[type="radio"]:checked + div::before,
-.stRadio input[type="radio"]:checked + span::before {
-    background-color: #ffd400;
-}
-
-/* Truco clave: sincronizar el checked */
-.stRadio input[type="radio"]:checked + div {
-    position: relative;
-}
-
-.stRadio input[type="radio"]:checked + div::before {
-
-
-
-st.set_page_config(page_title="Qué juguete sexual va contigo")
-
-# helper para info personalizada
-
-def info_custom(text: str):
-    st.markdown(
-        <div style='background-color: #FFEB3B; color: #FF00FF; padding: 14px; border-radius: 10px; border: 1px solid #FF00FF; font-weight: 600;'>
-            {text}
-        </div>
-
-        unsafe_allow_html=True,
-    )
             """
 
 st.title("Qué juguete sexual va contigo")
