@@ -109,8 +109,8 @@ f"""
              {texto} 
         </div>
         """
-        unsafe_allow_html=True
-    )
+        unsafe_allow_html=True
+        )
 
 # Guardamos la rama
 rama = op1[0]  # "A" o "B"
