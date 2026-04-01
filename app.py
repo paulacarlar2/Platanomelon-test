@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.markdown("""
+st.markdown(""",
 <style>
 .stApp {
     background-color: #f023b0;
