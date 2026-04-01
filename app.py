@@ -33,6 +33,41 @@ def info_custom(text: str):
             }
         </style>
     """, unsafe_allow_html=True)
+    # Reemplaza la sección de estilos (líneas 16-35) con esto:
+
+st.markdown("""
+    <style>
+        body {
+            background-color: #f023b0;
+            color: white;
+        }
+        .stApp {
+            background-color: #FF69B4;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: white;
+        }
+        .stRadio {
+            color: white;
+        }
+        .stRadio > label {
+            color: white;
+        }
+        /* Estilos para los radio buttons */
+        .stRadio > div > label > div:first-child {
+            background-color: #FFB6D9;  /* Rosa palo */
+            border-color: #FFB6D9;
+        }
+        .stRadio > div > label > div:first-child input:checked ~ div {
+            background-color: #FFEB3B;  /* Amarillo cuando se selecciona */
+            border-color: #FDD835;
+        }
+        /* Para inputs checked */
+        [data-testid="stRadio"] input:checked {
+            accent-color: #FFEB3B;  /* Amarillo */
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 
 st.title("¿Qué juguete sexual va contigo?")
