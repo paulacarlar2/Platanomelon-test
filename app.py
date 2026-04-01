@@ -58,7 +58,7 @@ st.markdown("""
 def caja_resultado(texto):
     st.markdown(
         f"""
-
+"""
 st.title("¿Qué juguete sexual va contigo?")
 
 # --- Pregunta 1 (ramificación principal) ---
