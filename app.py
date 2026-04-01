@@ -5,63 +5,67 @@ import streamlit as st
 # =======================================================
 st.markdown("""
     <style>
-        /* FONDO ROSA PARA TODA LA APP */
-        .stApp, .main {
+        /* 1. FONDO ROSA PARA TODA LA APP */
+        .stApp {
             background-color: #FF69B4 !important;
         }
         
-        /* LETRAS BLANCAS PARA EL QUIZ (Títulos, preguntas, opciones) */
-        .main h1, .main h2, .main h3, .main h4, .main h5, .main h6, 
-        .main p, .main span, .main label, .main div[data-baseweb="radio"] div {
+        /* 2. LETRAS BLANCAS (Francotirador: Solo afectamos a la parte central, el menú se salva) */
+        section[data-testid="stMain"] h1, 
+        section[data-testid="stMain"] h2, 
+        section[data-testid="stMain"] h3, 
+        section[data-testid="stMain"] h4, 
+        section[data-testid="stMain"] h5, 
+        section[data-testid="stMain"] h6, 
+        section[data-testid="stMain"] p, 
+        section[data-testid="stMain"] span, 
+        section[data-testid="stMain"] label, 
+        section[data-testid="stMain"] div[data-baseweb="radio"] div {
             color: white !important;
         }
 
-        /* RADIO BUTTONS (Los circulitos de las opciones) */
-        div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child {
+        /* 3. RADIO BUTTONS (Círculos) */
+        section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child {
             background-color: transparent !important;
-            border: 2px solid #FFEB3B !important; /* Borde amarillo */
+            border: 2px solid #FFEB3B !important; 
         }
-        div[data-testid="stRadio"] div[data-baseweb="radio"] input:checked + div {
-            background-color: #FFEB3B !important; /* Fondo amarillo al marcar */
+        section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] input:checked + div {
+            background-color: #FFEB3B !important; 
             border-color: #FFEB3B !important;
         }
-        div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
-            background-color: #FF00FF !important; /* Puntito rosa oscuro dentro */
+        section[data-testid="stMain"] div[data-testid="stRadio"] div[data-baseweb="radio"] > div:first-child > div {
+            background-color: #FF00FF !important; 
         }
         
-        /* BOTÓN DE "VER RESULTADO" */
-        div.stButton > button {
-            background-color: white !important; /* Fondo blanco */
-            border: 2px solid #FFEB3B !important; /* Borde amarillo */
+        /* 4. BOTÓN DE "VER RESULTADO" */
+        section[data-testid="stMain"] div.stButton > button {
+            background-color: white !important; 
+            border: 2px solid #FFEB3B !important; 
             border-radius: 10px !important;
         }
-        div.stButton > button p, div.stButton > button span {
-            color: #FF69B4 !important; /* Letras rosas */
+        section[data-testid="stMain"] div.stButton > button p, 
+        section[data-testid="stMain"] div.stButton > button span {
+            color: #FF69B4 !important; 
             font-weight: bold !important;
             font-size: 18px !important;
         }
-        /* Efecto al pasar el ratón por el botón */
-        div.stButton > button:hover {
-            background-color: #FFEB3B !important; /* Fondo amarillo */
+        section[data-testid="stMain"] div.stButton > button:hover {
+            background-color: #FFEB3B !important; 
             border-color: white !important;
         }
-        div.stButton > button:hover p, div.stButton > button:hover span {
-            color: #FF00FF !important; /* Letras rosa oscuro */
+        section[data-testid="stMain"] div.stButton > button:hover p, 
+        section[data-testid="stMain"] div.stButton > button:hover span {
+            color: #FF00FF !important; 
         }
 
-        /* BLINDAJE PARA LA CAJA DE RESULTADO (Siempre texto rosa) */
-        .caja-magica, .caja-magica p, .caja-magica span {
+        /* 5. BLINDAJE PARA LA CAJA DE RESULTADO (Siempre texto rosa) */
+        section[data-testid="stMain"] .caja-magica, 
+        section[data-testid="stMain"] .caja-magica p, 
+        section[data-testid="stMain"] .caja-magica span {
             color: #FF69B4 !important;
             font-weight: 900 !important;
             font-size: 22px !important;
             margin: 0 !important;
-        }
-
-        /* SALVAMOS EL MENÚ DE ARRIBA (Modo claro/oscuro) */
-        header[data-testid="stHeader"] *, 
-        div[data-baseweb="popover"] *, 
-        div[role="dialog"] * {
-            color: var(--text-color) !important; /* Se adapta solo */
         }
     </style>
 """, unsafe_allow_html=True)
